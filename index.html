@@ -1,1 +1,1113 @@
-C:\Users\yoga\WorkBuddy\20260322142943\BIS_14Day\index.html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIS 產品培訓 · 14天訓練營</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+        
+        .glow {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+        
+        .dialogue-box {
+            background: linear-gradient(145deg, #2d2d44, #1f1f35);
+            border-left: 4px solid #ffd700;
+        }
+        
+        .customer-dialogue {
+            background: linear-gradient(145deg, #1e3a5f, #152238);
+            border-left: 4px solid #4ecdc4;
+        }
+        
+        .sales-dialogue {
+            background: linear-gradient(145deg, #3d2b1f, #2a1f17);
+            border-left: 4px solid #ffd700;
+        }
+        
+        .tip-box {
+            background: linear-gradient(145deg, #1a4d3e, #0d2f25);
+            border: 1px solid #2ecc71;
+        }
+        
+        .exercise-card {
+            background: linear-gradient(145deg, #3d1a4d, #250f30);
+            border: 2px solid #9b59b6;
+        }
+        
+        .day-card {
+            background: linear-gradient(145deg, #2c2c54, #1a1a3e);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .day-card:hover {
+            border-color: #ffd700;
+            transform: translateY(-3px);
+            transition: all 0.3s;
+        }
+        
+        .day-card.completed {
+            border-color: #2ecc71;
+            background: linear-gradient(145deg, #1a3d2e, #0f2518);
+        }
+        
+        .tab-active {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #1a1a2e;
+        }
+        
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.8); }
+        }
+        
+        .pulse-animation {
+            animation: pulse-gold 2s ease-in-out infinite;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ffd700, #ff8c00);
+            border-radius: 4px;
+        }
+        
+        /* Login Page Styles */
+        .login-container {
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .login-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .login-input:focus {
+            border-color: #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            outline: none;
+        }
+        
+        .login-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #1a1a2e;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+        
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #ffd700, #ff8c00);
+            height: 100%;
+            transition: width 0.5s ease;
+        }
+        
+        .mobile-menu {
+            background: rgba(26, 26, 46, 0.98);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="text-white">
+    
+    <!-- ============================================ -->
+    <!-- LOGIN PAGE -->
+    <!-- ============================================ -->
+    <div id="loginPage" class="min-h-screen flex items-center justify-center p-4">
+        <div class="login-container rounded-3xl p-8 md:p-12 max-w-md w-full">
+            <!-- Logo -->
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                    <span class="text-3xl font-black text-black">BIS</span>
+                </div>
+                <h1 class="text-3xl font-bold gradient-text mb-2">BIS 產品培訓</h1>
+                <p class="text-gray-400">富饒萬家儲蓄保險計劃 · 14天訓練營</p>
+            </div>
+            
+            <!-- Login Form -->
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm text-gray-300 mb-2">你的姓名</label>
+                    <input type="text" id="loginName" class="login-input w-full px-4 py-3 rounded-xl" placeholder="請輸入姓名">
+                    <div id="loginNameError" class="text-red-400 text-sm mt-2 hidden">❌ 請輸入你的姓名</div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm text-gray-300 mb-2">培訓密碼</label>
+                    <input type="password" id="loginPassword" class="login-input w-full px-4 py-3 rounded-xl" placeholder="請輸入密碼">
+                    <div id="loginPasswordError" class="text-red-400 text-sm mt-2 hidden">❌ 密碼錯誤</div>
+                </div>
+                
+                <button onclick="handleLogin()" class="login-btn w-full py-4 rounded-xl text-lg mt-6">
+                    進入培訓 🚀
+                </button>
+            </div>
+            
+            <!-- Footer -->
+            <div class="text-center mt-8 text-gray-500 text-sm">
+                <p>輸入姓名及密碼即可開始學習</p>
+                <p class="mt-2">密碼：<code class="bg-gray-800 px-2 py-1 rounded">BIS2026</code></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ============================================ -->
+    <!-- MAIN TRAINING PAGE -->
+    <!-- ============================================ -->
+    <div id="mainPage" class="hidden">
+        
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-md border-b border-yellow-500/30">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center font-bold text-black text-lg">
+                            BIS
+                        </div>
+                        <div>
+                            <span class="font-bold text-lg">14天訓練營</span>
+                            <span id="userNameDisplay" class="ml-2 text-sm text-yellow-400"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center gap-2">
+                        <button onclick="showWeek(1)" class="week-tab nav-btn px-4 py-2 rounded-lg hover:bg-yellow-500/20 transition-all" data-week="1">📗 第一週</button>
+                        <button onclick="showWeek(2)" class="week-tab nav-btn px-4 py-2 rounded-lg hover:bg-yellow-500/20 transition-all" data-week="2">📕 第二週</button>
+                        <button onclick="showSummary()" class="nav-btn px-4 py-2 rounded-lg hover:bg-yellow-500/20 transition-all">📊 總結</button>
+                    </div>
+                    
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="max-w-6xl mx-auto px-4 pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="progress-bar flex-1 h-2">
+                        <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span id="progressText" class="text-sm text-gray-400">0 / 14 天</span>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu hidden md:hidden absolute top-16 left-0 right-0 p-4 border-t border-yellow-500/30">
+                <div class="flex flex-col gap-2">
+                    <button onclick="showWeek(1); toggleMobileMenu();" class="px-4 py-3 rounded-lg hover:bg-yellow-500/20 text-left">📗 第一週</button>
+                    <button onclick="showWeek(2); toggleMobileMenu();" class="px-4 py-3 rounded-lg hover:bg-yellow-500/20 text-left">📕 第二週</button>
+                    <button onclick="showSummary(); toggleMobileMenu();" class="px-4 py-3 rounded-lg hover:bg-yellow-500/20 text-left">📊 總結</button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Content Area -->
+        <div class="pt-32 pb-20 px-4 max-w-6xl mx-auto">
+            
+            <!-- Day Content Card -->
+            <div id="dayContent" class="hidden mb-8">
+                <!-- Will be populated by JavaScript -->
+            </div>
+            
+            <!-- Week 1 -->
+            <div id="week1Content" class="mb-8">
+                <h2 class="text-2xl font-bold gradient-text mb-6">📗 第一週：產品基礎</h2>
+                <div id="week1Days" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Days will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Week 2 -->
+            <div id="week2Content" class="mb-8 hidden">
+                <h2 class="text-2xl font-bold gradient-text mb-6">📕 第二週：傳承工具 + 實戰</h2>
+                <div id="week2Days" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Days will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Summary -->
+            <div id="summaryContent" class="hidden">
+                <h2 class="text-2xl font-bold gradient-text mb-6">📊 14天培訓總結</h2>
+                <div class="login-container rounded-3xl p-8">
+                    <div class="text-center mb-8">
+                        <div class="text-6xl mb-4">🏆</div>
+                        <h3 class="text-2xl font-bold gradient-text">恭喜完成14天訓練！</h3>
+                        <p class="text-gray-400 mt-2">你已完成所有學習內容</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="text-center p-4 rounded-xl bg-yellow-500/10">
+                            <div id="summaryCompleted" class="text-4xl font-bold gradient-text">0</div>
+                            <div class="text-gray-400 text-sm">已完成天數</div>
+                        </div>
+                        <div class="text-center p-4 rounded-xl bg-green-500/10">
+                            <div id="summaryRemaining" class="text-4xl font-bold text-green-400">14</div>
+                            <div class="text-gray-400 text-sm">剩餘天數</div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-gray-400 mb-4">繼續努力，你係最掂既保險從業員！💪</p>
+                        <button onclick="resetProgress()" class="px-6 py-3 rounded-xl bg-gray-700 hover:bg-gray-600 transition-all">
+                            🔄 重置進度
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div id="navButtons" class="fixed bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-yellow-500/30 p-4 hidden">
+            <div class="max-w-6xl mx-auto flex gap-4">
+                <button id="prevBtn" onclick="prevDay()" class="flex-1 py-3 rounded-xl bg-gray-700 hover:bg-gray-600 transition-all font-semibold">
+                    ← 上一天
+                </button>
+                <button id="nextBtn" onclick="nextDay()" class="flex-1 py-3 rounded-xl login-btn">
+                    下一天 →
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ============================================ -->
+    <!-- SUBMISSION MODAL -->
+    <!-- ============================================ -->
+    <div id="submissionModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="login-container rounded-3xl p-8 max-w-lg w-full">
+            <h3 class="text-2xl font-bold gradient-text mb-4">📝 提交作業</h3>
+            <p id="submissionDay" class="text-gray-400 mb-6"></p>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm text-gray-300 mb-2">今日學習重點</label>
+                    <textarea id="submissionContent" class="login-input w-full px-4 py-3 rounded-xl h-32" placeholder="請描述你今日學到啲咩..."></textarea>
+                </div>
+                
+                <div>
+                    <label class="block text-sm text-gray-300 mb-2">練習心得（可留空）</label>
+                    <textarea id="submissionPractice" class="login-input w-full px-4 py-3 rounded-xl h-24" placeholder="你有做咩角色扮演/演練？"></textarea>
+                </div>
+            </div>
+            
+            <div class="flex gap-4 mt-6">
+                <button onclick="closeSubmissionModal()" class="flex-1 py-3 rounded-xl bg-gray-700 hover:bg-gray-600 transition-all">
+                    取消
+                </button>
+                <button onclick="submitHomework()" class="flex-1 py-3 rounded-xl login-btn">
+                    提交 ✓
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== CONFIGURATION =====
+        const TRAINING_PASSWORD = 'BIS2026';
+        const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScT5lSECD0i11yhZGdKvyx9ov3cZAB8LXfAQi33DrQAyw4XOQ/viewform';
+        
+        // ===== CURRICULUM DATA =====
+        const curriculum = [
+            // Week 1
+            { day: 1, week: 1, title: 'BIS係乜？', subtitle: '產品定位你要知', emoji: '🎯',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">BIS — 富饒萬家儲蓄保險計劃</h3>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">🌟 一句話介紹</h4>
+                    <p class="text-gray-300">「一份幫你慳錢、賺錢、傳承嘅長線儲蓄保險！」</p>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">📌 三大核心功能</h4>
+                <div class="grid gap-3 mb-6">
+                    <div class="dialogue-box rounded-xl p-4">
+                        <div class="text-yellow-400 font-bold mb-1">💰 儲蓄增值</div>
+                        <p class="text-gray-300 text-sm">長線複息增長，保證 + 非保證回報</p>
+                    </div>
+                    <div class="dialogue-box rounded-xl p-4">
+                        <div class="text-yellow-400 font-bold mb-1">🔄 彈性提取</div>
+                        <p class="text-gray-300 text-sm">幾時拎、拎幾多，你自己話事</p>
+                    </div>
+                    <div class="dialogue-box rounded-xl p-4">
+                        <div class="text-yellow-400 font-bold mb-1">🏠 家族傳承</div>
+                        <p class="text-gray-300 text-sm">一份保單，傳幾代人</p>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">💬 客戶常見問題</h4>
+                <div class="customer-dialogue rounded-xl p-4 mb-2">
+                    <p class="text-gray-300">「呢個同存款有咩分別？」</p>
+                </div>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「存款係你想要幾多就拎幾多，但係BIS係幫你lock實筆錢慢慢長大，等佢複息滾存，而且仲有保險成分，有人走得早都可以留低一筆錢俾屋企人。」</p>
+                </div>
+                
+                <div class="exercise-card rounded-xl p-4">
+                    <h4 class="font-bold text-purple-400 mb-2">📝 今日練習</h4>
+                    <p class="text-gray-300 text-sm">用30秒向屋企人介紹BIS，試下可唔可以解釋到三大核心功能！</p>
+                </div>
+              `
+            },
+            { day: 2, week: 1, title: '10種保單貨幣', subtitle: '市場最多！', emoji: '💱',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">全球10種貨幣話事</h3>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">🌟 核心賣點</h4>
+                    <p class="text-gray-300">「市場上最多選擇嘅多貨幣保單！」</p>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">🌍 可選貨幣</h4>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                    ${['美元 USD', '港元 HKD', '人民幣 CNY', '英鎊 GBP', '歐元 EUR', '瑞士法郎 CHF', '澳元 AUD', '加元 CAD', '新加坡元 SGD', '日圓 JPY'].map(c => 
+                        `<div class="bg-gray-800 rounded-lg p-2 text-center text-sm">${c}</div>`
+                    ).join('')}
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">💬 客戶常見問題</h4>
+                <div class="customer-dialogue rounded-xl p-4 mb-2">
+                    <p class="text-gray-300">「我做緊澳門生意，收澳門幣，港幣兌換幾時都蝕底...」</p>
+                </div>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「明白！所以呢個正正就幫到你，你可以揀澳門幣做保單貨幣，直接用澳門幣供款、保單入面都係澳門幣，唔使再捱匯率！到時你想轉其他貨幣，例如英鎊、美元升值嗰時，你又可以免費轉，一張保單搞掂！」</p>
+                </div>
+                
+                <div class="exercise-card rounded-xl p-4">
+                    <h4 class="font-bold text-purple-400 mb-2">📝 今日練習</h4>
+                    <p class="text-gray-300 text-sm">試下幫以下客人建議適合嘅貨幣：<br>• 在香港工作既内地客<br>• 有英國樓收租既香港客<br>• 做澳門博彩生意既客</p>
+                </div>
+              `
+            },
+            { day: 3, week: 1, title: '紅利機制', subtitle: '復歸紅利 + 終期紅利', emoji: '💵',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">紅利係點樣幫你賺錢？</h3>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">🔹 復歸紅利</h4>
+                        <p class="text-gray-300 text-sm mb-2">年年派，一經公佈就唔會縮水</p>
+                        <div class="text-green-400 font-bold">= 年年雙糧</div>
+                    </div>
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">🔸 終期紅利</h4>
+                        <p class="text-gray-300 text-sm mb-2">保單先派，每年可能變動</p>
+                        <div class="text-yellow-400 font-bold">= 年尾花紅</div>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">💬 客戶常見問題</h4>
+                <div class="customer-dialogue rounded-xl p-4 mb-2">
+                    <p class="text-gray-300">「非保證？咁即係未必有？」</p>
+                </div>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「我明你擔心，但係你要知道，保險公司派紅利唔係老闆話派幾多就派幾多，而係要睇佢哋嘅投資收益。如果佢哋投資表現好，仲會派得更多！歷史數據顯示，呢間公司嘅紅利實現率一直維持喺95%以上，即係話當初預期100蚊，實收95蚊以上，係相當穩健嘅！」</p>
+                </div>
+                
+                <div class="tip-box rounded-xl p-4">
+                    <h4 class="font-bold text-green-400 mb-2">💡 銷售員小提示</h4>
+                    <p class="text-gray-300 text-sm">強調「紅利實現率」呢個數據，可以增加客戶信心！</p>
+                </div>
+              `
+            },
+            { day: 4, week: 1, title: '紅利鎖定+解鎖', subtitle: '市場罕有功能', emoji: '🔐',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">幫紅利上一把安全鎖</h3>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">🌟 呢個功能市場罕有！</h4>
+                    <p class="text-gray-300">「將未來嘅非保證紅利lock實，等佢變成保證！」</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">🔒 紅利鎖定</h4>
+                        <p class="text-gray-300 text-sm">「好似股票止賺，賺到袋先！」</p>
+                        <p class="text-green-400 text-sm mt-2">✓ 轉危為安</p>
+                        <p class="text-green-400 text-sm">✓ 市場跌都唔驚</p>
+                    </div>
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">🔓 紅利解鎖</h4>
+                        <p class="text-gray-300 text-sm">「後悔？可以再博過！」</p>
+                        <p class="text-green-400 text-sm mt-2">✓ 市場升可分享</p>
+                        <p class="text-green-400 text-sm">✓ 彈性唔會被困死</p>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">💬 示範話術</h4>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「李生，如果你見到股市大跌，你會點？係咪想走？但係走就真係變真虧損啦嘛！呢個時候你可以用紅利鎖定功能，話晒lock實嗰筆錢係你嘅，唔使再理會市場波動。等市場穩返，你可以選擇解鎖，繼續博高啲！」</p>
+                </div>
+                
+                <div class="exercise-card rounded-xl p-4">
+                    <h4 class="font-bold text-purple-400 mb-2">📝 今日練習</h4>
+                    <p class="text-gray-300 text-sm">解釋「如果股市跌50%，紅利鎖定可以點幫到你？」</p>
+                </div>
+              `
+            },
+            { day: 5, week: 1, title: '保單分拆', subtitle: '一份變幾份', emoji: '✂️',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">一份保單，分俾所有人</h3>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">🌟 核心概念</h4>
+                    <p class="text-gray-300">「一份保單可以拆成幾份，每份獨立運作」</p>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">🔄 可以點分？</h4>
+                <div class="grid gap-3 mb-6">
+                    <div class="dialogue-box rounded-xl p-4">
+                        <div class="text-yellow-400 font-bold mb-1">👨‍👩‍👧 分俾仔女</div>
+                        <p class="text-gray-300 text-sm">大仔一份、二女一份，各自獨立</p>
+                    </div>
+                    <div class="dialogue-box rounded-xl p-4">
+                        <div class="text-yellow-400 font-bold mb-1">🌍 分唔同貨幣</div>
+                        <p class="text-gray-300 text-sm">美元一份、歐元一份，風險分散</p>
+                    </div>
+                    <div class="dialogue-box rounded-xl p-4">
+                        <div class="text-yellow-400 font-bold mb-1">📅 分唔同時間</div>
+                        <p class="text-gray-300 text-sm">18歲一份、25歲一份，慢慢拎</p>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">💬 示範話術</h4>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「張太，你話想幫三個孫仔孫女各準備一筆教育基金，但係又驚麻鬼煩年年打理唔同既保單⋯⋯呢個時候保單分拆就幫到你！你一份原始保單，到時拆成三份，每個孫一份，佢哋各有自己既保單，仲可以揀唔同貨幣，澳洲孫就澳洲幣，英國孫就英鎊，幾贴心！」</p>
+                </div>
+                
+                <div class="exercise-card rounded-xl p-4">
+                    <h4 class="font-bold text-purple-400 mb-2">📝 今日練習</h4>
+                    <p class="text-gray-300 text-sm">幫一個有兩個孩子既父親設計保單分拆方案</p>
+                </div>
+              `
+            },
+            { day: 6, week: 1, title: '彈性提取+保費假期', subtitle: '你自己話事', emoji: '⏰',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">幾時拎、拎幾多，話事係你</h3>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">💰 彈性提取</h4>
+                        <p class="text-gray-300 text-sm mb-2">設定自動定期提取</p>
+                        <p class="text-green-400 text-sm">= 自動櫃員機</p>
+                        <p class="text-gray-400 text-xs mt-2">月月、年年、按你需要</p>
+                    </div>
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">🏖️ 保費假期</h4>
+                        <p class="text-gray-300 text-sm mb-2">暫時停供款，喘氣空間</p>
+                        <p class="text-green-400 text-sm">= 信用卡最低還款</p>
+                        <p class="text-gray-400 text-xs mt-2">有困難時可申請</p>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">💬 常見問題</h4>
+                <div class="customer-dialogue rounded-xl p-4 mb-2">
+                    <p class="text-gray-300">「如果我失業供唔起點算？」</p>
+                </div>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「呢個就係保費假期既用途！你可以申請暫時停供，等你穩定返再繼續。雖然 holiday 期間冇紅利，但係你之前累積既依然喺度，保障唔會斷。而且唔同其他公司，你唔使補晒之前欠既保費先再供，係真正既假期！」</p>
+                </div>
+                
+                <div class="tip-box rounded-xl p-4">
+                    <h4 class="font-bold text-green-400 mb-2">💡 銷售員小提示</h4>
+                    <p class="text-gray-300 text-sm">呢個功能特別岩同上有老、下有小既夾心層傾！佢哋最需要財務彈性！</p>
+                </div>
+              `
+            },
+            { day: 7, week: 1, title: '第一週總結', subtitle: '產品基礎測試', emoji: '📚',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">恭喜完成第一週！</h3>
+                
+                <div class="login-container rounded-xl p-6 mb-6">
+                    <h4 class="font-bold text-yellow-400 mb-4">📋 你今日學到咩？</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>✅ BIS係乜 — 儲蓄、增值、傳承三大功能</p>
+                        <p>✅ 10種保單貨幣 — 市場最多</p>
+                        <p>✅ 紅利機制 — 復歸紅利 + 終期紅利</p>
+                        <p>✅ 紅利鎖定+解鎖 — 市場罕有</p>
+                        <p>✅ 保單分拆 — 一份變幾份</p>
+                        <p>✅ 彈性提取 + 保費假期</p>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">🧠 快速測驗</h4>
+                <div class="space-y-4 mb-6">
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-white mb-2">1. BIS有幾多種保單貨幣可以選擇？</p>
+                        <input type="text" class="login-input w-full px-3 py-2 rounded-lg mt-2" placeholder="你的答案...">
+                    </div>
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-white mb-2">2. 紅利鎖定可以做到咩？</p>
+                        <input type="text" class="login-input w-full px-3 py-2 rounded-lg mt-2" placeholder="你的答案...">
+                    </div>
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-white mb-2">3. 保費假期係指咩？</p>
+                        <input type="text" class="login-input w-full px-3 py-2 rounded-lg mt-2" placeholder="你的答案...">
+                    </div>
+                </div>
+                
+                <div class="tip-box rounded-xl p-4">
+                    <h4 class="font-bold text-green-400 mb-2">💡 下週預告</h4>
+                    <p class="text-gray-300 text-sm">第二週我哋會學：12款終身年金、傳承工具、身故保障、應對缺點話術！</p>
+                </div>
+              `
+            },
+            // Week 2
+            { day: 8, week: 2, title: '12款終身年金', subtitle: '市場獨有！', emoji: '🎂',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">自製長俸，月月有錢落袋</h3>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">🌟 市場獨有！</h4>
+                    <p class="text-gray-300">「12款終身年金，總有一款岩你！」</p>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">🗓️ 年金種類例子</h4>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                    ${['即享年金（開始即拎）', '遞延年金（慢慢長大）', '定額年金（固定金額）', '變額年金（有機會更多）', '保證10年', '保證20年', '純終身', '夫妻共同'].map(c => 
+                        `<div class="bg-gray-800 rounded-lg p-2 text-center text-xs">${c}</div>`
+                    ).join('')}
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">💬 示範話術</h4>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「李生，你想像下，如果你60歲開始，每個月有$10,000自動存入你戶口，Guarantee 拎20年，即係至少拎240萬，而且活到幾多歲就拎到幾多歲，唔使擔心長命錢唔夠用。你話係唔係好安心？」</p>
+                </div>
+                
+                <div class="exercise-card rounded-xl p-4">
+                    <h4 class="font-bold text-purple-400 mb-2">📝 今日練習</h4>
+                    <p class="text-gray-300 text-sm">幫一個55歲既退休人士建議適合嘅年金類型</p>
+                </div>
+              `
+            },
+            { day: 9, week: 2, title: '傳承工具', subtitle: '第二持有人/受保人', emoji: '👨‍👩‍👧‍👦',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">一份保單，傳幾代人</h3>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">👤 第二保單持有人</h4>
+                        <p class="text-gray-300 text-sm mb-2">万一有事自動上位</p>
+                        <p class="text-green-400 text-sm">= 公司副總裁</p>
+                    </div>
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">👥 第二受保人</h4>
+                        <p class="text-gray-300 text-sm mb-2">保障既「備胎」</p>
+                        <p class="text-green-400 text-sm">= 球隊後備</p>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">🔄 更改受保人</h4>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「你可以不斷換人享受保障！例如阿爸買俾阿仔，等阿仔大個結婚後，又可以將受保人轉為新抱，一代一代傳落去！」</p>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">⚠️ 精神上無行為能力預設指示</h4>
+                <div class="tip-box rounded-xl p-4 mb-4">
+                    <p class="text-gray-300 text-sm">如果你將來失去精神行為能力（例如認知障礙），預先指定邊個可以幫你打理保單，避免麻煩。</p>
+                </div>
+                
+                <div class="exercise-card rounded-xl p-4">
+                    <h4 class="font-bold text-purple-400 mb-2">📝 今日練習</h4>
+                    <p class="text-gray-300 text-sm">解釋點解有小朋友既家長需要考慮第二受保人？</p>
+                </div>
+              `
+            },
+            { day: 10, week: 2, title: '11種身故保障', subtitle: '照顧你想照顧既人', emoji: '🛡️',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">走咗都安心，留錢俾屋企人</h3>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">🌟 11種身故保障選項</h4>
+                    <p class="text-gray-300">「總有一款岩你想要！」</p>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">🔍 常見選項</h4>
+                <div class="grid gap-2 mb-6 text-sm text-gray-300">
+                    ${['一次性支付一筆過', '分期支付（例如10年）', '每月年金形式', '保障延續（唔使一次過拎晒）', '累積利息回報'].map(c => 
+                        `<div class="flex items-center gap-2"><span class="text-green-400">✓</span> ${c}</div>`
+                    ).join('')}
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">💬 示範話術</h4>
+                <div class="sales-dialogue rounded-xl p-4 mb-4">
+                    <p class="text-gray-300">「王太，我知道你最擔心就係如果自己有事，三個小朋友點算。呢個計劃可以幫你設定受益人，你可以選擇10年分期支付，即係每月俾佢哋生活費，唔使擔心小朋友亂使錢，或者俾到佢哋25歲有大學學費為止，全部幫你安排妥當！」</p>
+                </div>
+                
+                <div class="tip-box rounded-xl p-4">
+                    <h4 class="font-bold text-green-400 mb-2">💡 銷售員小提示</h4>
+                    <p class="text-gray-300 text-sm">有小朋友既父母、單親家庭、配偶係家庭支柱——呢啲客呢個功能一定要重點介紹！</p>
+                </div>
+              `
+            },
+            { day: 11, week: 2, title: '應對缺點話術', subtitle: '萬能公式', emoji: '🗣️',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">客戶問缺點？唔使驚！</h3>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">🌟 萬能公式</h4>
+                    <p class="text-gray-300">「認同 → 轉移 → 放大」</p>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-purple-400 font-bold mb-2">❌ 「回報冇股票高」</p>
+                        <div class="sales-dialogue rounded-lg p-3 mt-2">
+                            <p class="text-gray-300 text-sm">「你講得啱，長線股票係有可能更高，但係你想想像2008年金融風暴、2020年疫情、2022年股災⋯⋯股票可以跌一半，但係呢個計劃有保證部分，跌都唔會影響你嘅基本回報。你係想要博命賺但係可能歸零，定係穩穩陣陣慢慢增長？」</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-purple-400 font-bold mb-2">❌ 「流動性唔夠」</p>
+                        <div class="sales-dialogue rounded-lg p-3 mt-2">
+                            <p class="text-gray-300 text-sm">「流動性高其實係雙刃劍，代表你隨時可以拎，變相你儲唔到錢。我見過好多人話股票流動性高，結果月月清，幾十年都冇積蓄。但係呢個計劃有保費假期同埋部分提取功能，其實係比你想有更多彈性！」</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-purple-400 font-bold mb-2">❌ 「等有錢再買」</p>
+                        <div class="sales-dialogue rounded-lg p-3 mt-2">
+                            <p class="text-gray-300 text-sm">「你知唔知遲買既代價？同樣係60歲拎每月$10,000，30歲開始月供$2,000就得，但係40歲先開始就要月供$4,000，你願意為自己懶惰多俾一倍嗎？」</p>
+                        </div>
+                    </div>
+                </div>
+              `
+            },
+            { day: 12, week: 2, title: '客群切入點', subtitle: '對症下藥', emoji: '🎯',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">唔同客群，唔同角度</h3>
+                
+                <div class="grid gap-4 mb-6">
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">👨‍👩‍👧 父母客 → 子女教育</h4>
+                        <p class="text-gray-300 text-sm">「你想小朋友讀好啲學校，但係教育費越來越貴⋯⋯」</p>
+                        <p class="text-green-400 text-sm mt-2">切入點：教育基金、留學費用</p>
+                    </div>
+                    
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">👴 退休人士 → 月月有錢</h4>
+                        <p class="text-gray-300 text-sm">「你擔心長命錢唔夠用，但又驚股票大跌⋯⋯」</p>
+                        <p class="text-green-400 text-sm mt-2">切入點：終身年金、被動收入</p>
+                    </div>
+                    
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">🏠 傳承客 → 留錢後代</h4>
+                        <p class="text-gray-300 text-sm">「你想留筆錢俾仔女，但又驚佢哋亂使⋯⋯」</p>
+                        <p class="text-green-400 text-sm mt-2">切入點：保單分拆、分期領取</p>
+                    </div>
+                    
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">💼 做生意 → 風險分散</h4>
+                        <p class="text-gray-300 text-sm">「你生意週期好波動，經濟差就冇收入⋯⋯」</p>
+                        <p class="text-green-400 text-sm mt-2">切入點：多貨幣、保費假期</p>
+                    </div>
+                    
+                    <div class="dialogue-box rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-400 mb-2">🌟 年輕人 → 強迫儲蓄</h4>
+                        <p class="text-gray-300 text-sm">「你話月月清，唔知點儲錢⋯⋯」</p>
+                        <p class="text-green-400 text-sm mt-2">切入點：保費假期、複息增長</p>
+                    </div>
+                </div>
+                
+                <div class="exercise-card rounded-xl p-4">
+                    <h4 class="font-bold text-purple-400 mb-2">📝 今日練習</h4>
+                    <p class="text-gray-300 text-sm">揀一個你認識既人，設計一個適合佢既切入點！</p>
+                </div>
+              `
+            },
+            { day: 13, week: 2, title: '實戰演練', subtitle: '角色扮演', emoji: '🎭',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4">係時候實戰！</h3>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">🎯 今日任務</h4>
+                    <p class="text-gray-300">同屋企人或同事做一次角色扮演！</p>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">📋 演練場景</h4>
+                <div class="space-y-3 mb-6">
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-purple-400 font-bold mb-2">場景一：父母客</p>
+                        <p class="text-gray-300 text-sm">你係保險顧問，客人係一位40歲既爸爸，想為5歲既仔準備教育基金。</p>
+                    </div>
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-purple-400 font-bold mb-2">場景二：退休客</p>
+                        <p class="text-gray-300 text-sm">你係保險顧問，客人係一位60歲既女士，擔心退休積蓄唔夠用。</p>
+                    </div>
+                    <div class="exercise-card rounded-xl p-4">
+                        <p class="text-purple-400 font-bold mb-2">場景三：傳承客</p>
+                        <p class="text-gray-300 text-sm">你係保險顧問，客人係一位55歲既老闆，想留筆錢俾兩個仔。</p>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-yellow-400 mb-3">⭐ 評分標準</h4>
+                <div class="space-y-2 text-sm">
+                    <p>✅ 有冇問清楚客人既需要（20分）</p>
+                    <p>✅ 係唔係用咗適當既切入點（20分）</p>
+                    <p>✅ 係唔係用咗生活化語言（20分）</p>
+                    <p>✅ 係唔係能夠答到客人問題（20分）</p>
+                    <p>✅ 係唔係有適當既結尾（Call to Action）（20分）</p>
+                </div>
+              `
+            },
+            { day: 14, week: 2, title: '14天總結', subtitle: '恭喜畢業！', emoji: '🏆',
+              content: `
+                <h3 class="text-xl font-bold gradient-text mb-4 text-center">🎉 恭喜完成14天BIS培訓！</h3>
+                
+                <div class="login-container rounded-xl p-6 mb-6">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🏆</div>
+                        <h4 class="text-2xl font-bold gradient-text">你係最掂既BISsales！</h4>
+                    </div>
+                    
+                    <h4 class="font-bold text-yellow-400 mb-4">📚 課程總結</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>✅ Day 1-6：第一週產品基礎</p>
+                        <p>✅ Day 8-13：第二週傳承 + 實戰</p>
+                        <p>✅ 專業術語：復歸紅利、終期紅利、紅利鎖定、保單分拆...</p>
+                        <p>✅ 話術技巧：生活比喻、轉移視線</p>
+                        <p>✅ 客群切入：父母、退休、傳承、做生意、年輕人</p>
+                    </div>
+                </div>
+                
+                <div class="tip-box rounded-xl p-4 mb-6">
+                    <h4 class="font-bold text-green-400 mb-2">💪 下一步行動</h4>
+                    <p class="text-gray-300 text-sm">1. 每日Keep住練習介紹BIS</p>
+                    <p class="text-gray-300 text-sm">2. 搵3個潛在客戶傾下</p>
+                    <p class="text-gray-300 text-sm">3. 記錄客人問題，持續改進</p>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-gray-400 mb-4">記住：你唔係賣緊一份保險，你係幫緊人建立財務安全感！</p>
+                    <div class="text-4xl">💪💰🏠</div>
+                </div>
+              `
+            }
+        ];
+        
+        // ===== STATE =====
+        let currentWeek = 1;
+        let currentDay = 1;
+        let completedDays = [];
+        
+        // ===== INITIALIZATION =====
+        function init() {
+            // Check if already logged in
+            const name = sessionStorage.getItem('bis_trainee_name');
+            if (name) {
+                showMainPage(name);
+            }
+            
+            // Render day lists
+            renderDayLists();
+            updateProgress();
+        }
+        
+        // ===== LOGIN =====
+        function handleLogin() {
+            const name = document.getElementById('loginName').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+            
+            let hasError = false;
+            
+            if (!name) {
+                document.getElementById('loginNameError').classList.remove('hidden');
+                hasError = true;
+            } else {
+                document.getElementById('loginNameError').classList.add('hidden');
+            }
+            
+            if (password !== TRAINING_PASSWORD) {
+                document.getElementById('loginPasswordError').classList.remove('hidden');
+                hasError = true;
+            } else {
+                document.getElementById('loginPasswordError').classList.add('hidden');
+            }
+            
+            if (hasError) return;
+            
+            // Save to session
+            sessionStorage.setItem('bis_trainee_name', name);
+            completedDays = JSON.parse(localStorage.getItem('bis_completed_' + name) || '[]');
+            
+            showMainPage(name);
+        }
+        
+        function showMainPage(name) {
+            document.getElementById('loginPage').classList.add('hidden');
+            document.getElementById('mainPage').classList.remove('hidden');
+            document.getElementById('userNameDisplay').textContent = '👤 ' + name;
+            
+            // Show first incomplete day
+            const firstIncomplete = curriculum.find(d => !completedDays.includes(d.day));
+            if (firstIncomplete) {
+                currentDay = firstIncomplete.day;
+                currentWeek = firstIncomplete.week;
+                showDay(currentDay);
+            }
+            
+            renderDayLists();
+            updateProgress();
+        }
+        
+        function logout() {
+            sessionStorage.removeItem('bis_trainee_name');
+            location.reload();
+        }
+        
+        // ===== RENDER =====
+        function renderDayLists() {
+            const week1 = document.getElementById('week1Days');
+            const week2 = document.getElementById('week2Days');
+            
+            week1.innerHTML = curriculum.filter(d => d.week === 1).map(d => createDayCard(d)).join('');
+            week2.innerHTML = curriculum.filter(d => d.week === 2).map(d => createDayCard(d)).join('');
+        }
+        
+        function createDayCard(day) {
+            const isCompleted = completedDays.includes(day.day);
+            return `
+                <div onclick="showDay(${day.day})" class="day-card rounded-xl p-4 cursor-pointer ${isCompleted ? 'completed' : ''}">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-2xl">${day.emoji}</span>
+                        <span class="text-sm ${isCompleted ? 'text-green-400' : 'text-gray-400'}">${isCompleted ? '✅' : day.day + '/14'}</span>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Day ${day.day}</h4>
+                    <p class="text-gray-400 text-sm">${day.title}</p>
+                    <p class="text-gray-500 text-xs mt-1">${day.subtitle}</p>
+                </div>
+            `;
+        }
+        
+        // ===== NAVIGATION =====
+        function showWeek(week) {
+            currentWeek = week;
+            document.getElementById('week1Content').classList.toggle('hidden', week !== 1);
+            document.getElementById('week2Content').classList.toggle('hidden', week !== 2);
+            document.getElementById('summaryContent').classList.add('hidden');
+            document.getElementById('dayContent').classList.add('hidden');
+            document.getElementById('navButtons').classList.add('hidden');
+            
+            // Update tabs
+            document.querySelectorAll('.week-tab').forEach(tab => {
+                tab.classList.remove('tab-active');
+                if (parseInt(tab.dataset.week) === week) {
+                    tab.classList.add('tab-active');
+                }
+            });
+            
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        function showDay(dayNum) {
+            const day = curriculum.find(d => d.day === dayNum);
+            if (!day) return;
+            
+            currentDay = dayNum;
+            currentWeek = day.week;
+            
+            // Hide week content, show day content
+            document.getElementById('week1Content').classList.add('hidden');
+            document.getElementById('week2Content').classList.add('hidden');
+            document.getElementById('summaryContent').classList.add('hidden');
+            document.getElementById('dayContent').classList.remove('hidden');
+            document.getElementById('navButtons').classList.remove('hidden');
+            
+            // Render content
+            const content = `
+                <div class="login-container rounded-3xl p-6 md:p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <span class="text-gray-400 text-sm">${day.week === 1 ? '📗 第一週' : '📕 第二週'} · Day ${day.day}</span>
+                            <h2 class="text-2xl font-bold gradient-text">${day.emoji} ${day.title}</h2>
+                            <p class="text-gray-400">${day.subtitle}</p>
+                        </div>
+                        <button onclick="toggleComplete(${day.day})" class="px-4 py-2 rounded-xl ${completedDays.includes(day.day) ? 'bg-green-600' : 'bg-gray-700'} hover:opacity-80 transition-all">
+                            ${completedDays.includes(day.day) ? '✅ 已完成' : '✓ 完成'}
+                        </button>
+                    </div>
+                    
+                    <div class="prose prose-invert max-w-none">
+                        ${day.content}
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-700">
+                        <button onclick="openSubmissionModal(${day.day})" class="login-btn w-full py-3 rounded-xl">
+                            📝 提交作業
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('dayContent').innerHTML = content;
+            
+            // Update nav buttons
+            document.getElementById('prevBtn').disabled = day.day === 1;
+            document.getElementById('nextBtn').disabled = day.day === 14;
+            
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        function showSummary() {
+            document.getElementById('week1Content').classList.add('hidden');
+            document.getElementById('week2Content').classList.add('hidden');
+            document.getElementById('dayContent').classList.add('hidden');
+            document.getElementById('navButtons').classList.add('hidden');
+            document.getElementById('summaryContent').classList.remove('hidden');
+            
+            document.getElementById('summaryCompleted').textContent = completedDays.length;
+            document.getElementById('summaryRemaining').textContent = 14 - completedDays.length;
+            
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        function prevDay() {
+            if (currentDay > 1) {
+                showDay(currentDay - 1);
+            }
+        }
+        
+        function nextDay() {
+            if (currentDay < 14) {
+                showDay(currentDay + 1);
+            }
+        }
+        
+        // ===== COMPLETION =====
+        function toggleComplete(day) {
+            const name = sessionStorage.getItem('bis_trainee_name');
+            if (!name) return;
+            
+            if (completedDays.includes(day)) {
+                completedDays = completedDays.filter(d => d !== day);
+            } else {
+                completedDays.push(day);
+                completedDays.sort((a, b) => a - b);
+            }
+            
+            localStorage.setItem('bis_completed_' + name, JSON.stringify(completedDays));
+            
+            // Re-render
+            renderDayLists();
+            updateProgress();
+            showDay(day);
+        }
+        
+        function updateProgress() {
+            const pct = (completedDays.length / 14 * 100).toFixed(0);
+            document.getElementById('progressFill').style.width = pct + '%';
+            document.getElementById('progressText').textContent = completedDays.length + ' / 14 天';
+        }
+        
+        function resetProgress() {
+            const name = sessionStorage.getItem('bis_trainee_name');
+            if (!name) return;
+            
+            if (confirm('確定要重置進度嗎？')) {
+                completedDays = [];
+                localStorage.removeItem('bis_completed_' + name);
+                renderDayLists();
+                updateProgress();
+                showWeek(1);
+            }
+        }
+        
+        // ===== SUBMISSION =====
+        function openSubmissionModal(day) {
+            const dayData = curriculum.find(d => d.day === day);
+            document.getElementById('submissionDay').textContent = `Day ${day}：${dayData.title}`;
+            document.getElementById('submissionModal').classList.remove('hidden');
+            document.getElementById('submissionModal').classList.add('flex');
+        }
+        
+        function closeSubmissionModal() {
+            document.getElementById('submissionModal').classList.add('hidden');
+            document.getElementById('submissionModal').classList.remove('flex');
+            document.getElementById('submissionContent').value = '';
+            document.getElementById('submissionPractice').value = '';
+        }
+        
+        function submitHomework() {
+            const name = sessionStorage.getItem('bis_trainee_name') || '';
+            const content = document.getElementById('submissionContent').value.trim();
+            
+            if (!content) {
+                alert('請填寫作業內容');
+                return;
+            }
+            
+            // Open Google Form with pre-filled data
+            const baseUrl = GOOGLE_FORM_URL + '?usp=pp_url';
+            const url = baseUrl 
+                + '&entry.1234567=' + encodeURIComponent(name)
+                + '&entry.1234568=' + encodeURIComponent('Day ' + currentDay);
+            
+            closeSubmissionModal();
+            window.open(url, '_blank');
+            
+            // Mark as complete
+            if (!completedDays.includes(currentDay)) {
+                toggleComplete(currentDay);
+            }
+        }
+        
+        // ===== MOBILE MENU =====
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+        
+        // ===== ENTER KEY =====
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('loginPassword').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') handleLogin();
+            });
+        });
+        
+        // Init
+        init();
+    </script>
+</body>
+</html>
